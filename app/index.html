@@ -1,0 +1,69 @@
+---
+layout: default.html
+title: Home
+permalink: false
+---
+
+<div class="container">
+
+    <h1 class="title">Acappella Trainer</h1>
+
+    <p class="desc">This is a lightweight web app to help train and improve your acapella singing by repeatedly lowering and then raising back the volume of a song. Test how in-tune you are with the song when the volume is lowered! Simply configure the options, and then drag and drop a .mp3 file to this page.</p>
+
+    <form>
+    <div class="text">Acapella Trainer will initialize </div>
+    <div class="input">
+        <input type="number" required="required" value="10" id="inputStartAt"/>
+    </div>
+    <div class="text"> seconds after pressing the play button. Volume will then fade down to </div>
+    <div class="input">
+      <input type="number" required="required" value="5" id="inputFadeDownVolume"/>
+    </div>
+    <div class="text"> percent and stay there for </div>
+    <div class="input">
+      <input type="number" required="required" value="5" id="inputFadedDuration"/>
+    </div>
+    <div class="text"> seconds before going back to </div>
+    <div class="input">
+      <input type="number" required="required" value="100" id="inputRegularVolume"/>
+    </div>
+    <div class="text"> percent volume. This process repeats after </div>
+    <div class="input">
+      <input type="number" required="required" value="3" id="inputCycleDelay"/>
+    </div>
+    <div class="text"> seconds.</div>
+    </form>
+
+    <div id="cover-art">
+        <img id="cover-art-view" alt="cover-art" src="assets/images/default.png">
+        <div class="instructions">Drop your audio files here.</div>
+    </div>
+
+    <div id="wave"></div>
+
+    <div id="control-bar">
+
+        <div class="player-control">
+            <div id="previous-button" title="Previous"><i class="fa fa-fast-backward"></i></div>
+            <div id="play-button" title="Play"><i class="fa fa-play"></i></div>
+            <div id="pause-button" title="Pause"><i class="fa fa-pause"></i></div>
+            <div id="stop-button" title="Stop"><i class="fa fa-stop"></i></div>
+            <div id="repeat-button" title="Repeat Off"><i class="fa fa-refresh"><span>1</span></i></div>
+        </div>
+
+        <div id="playlist">
+
+            <div id="track-details" title="Show playlist">
+                <p id="track-desc">There are no tracks loaded in the player.</p>
+                <p id="track-time">
+                    <span id="current">-</span> / <span id="total">-</span>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="drop-zone" class="hidden">Drag &amp; Drop Files Here</div>
+
+</div>
