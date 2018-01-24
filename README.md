@@ -1,6 +1,6 @@
 
 
-## Acappella Trainer
+## Acapella Trainer
 
 [View the demo here](http://kendevdesigns.com/sandbox/acappella-trainer/)
 
